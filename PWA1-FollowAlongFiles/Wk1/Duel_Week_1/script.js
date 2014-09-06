@@ -7,7 +7,7 @@
 
 
 // self-executing function
-(function(){
+(function(){ //this function contains all the other functions to run program.
 
     console.log("FIGHT!!!");// print "FIGHT" to console to check and make sure HTML and JS files are working together.
 
@@ -26,7 +26,7 @@
     //initiate round
     var round=0;// round number set to zero for math function i++ will make round appear as 1 in the alert.
 
-    function fight(){
+    function fight(){ //this function is the function to simulate fighting and rounds.
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);//print player names, life points, and round number to console making sure the files are working correctly.
         for (var i = 0; i < 10; i++)
         {
@@ -58,7 +58,7 @@
         };
     };
 
-    function winnerCheck(){
+    function winnerCheck(){ //this function is the winner check function and is outside the other functions 
         var result="no winner";// variable for logic process if no winner occurs.
         if (playerOneHealth<1 && playerTwoHealth<1)
         {
