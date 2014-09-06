@@ -1,5 +1,5 @@
 /*
-Skyler Brown
+ Skyler Brown
  Week 1  ANALYZE Duel #1
  07/05/2014
  */
@@ -9,7 +9,7 @@ Skyler Brown
 // self-executing function
 (function(){
 
-    console.log("FIGHT!!!");
+    console.log("FIGHT!!!");// print "FIGHT" to console to check and make sure HTML and JS files are working together.
 
     //player name
     var playerOneName = "Spiderman";
@@ -40,11 +40,11 @@ Skyler Brown
             playerOneHealth-=f1;
             playerTwoHealth-=f2;
 
-            console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);
+            console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);//print player names, life points, and round number to console making sure the files are working correctly.
 
             //check for victor
             var result = winnerCheck();
-            console.log(result);
+            console.log(result);//print result to console making sure files are working correctly.
             if (result==="no winner")
             {
                 round++;
