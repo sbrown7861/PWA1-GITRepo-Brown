@@ -52,13 +52,13 @@
 
             } else{
                 alert(result);// alert pop-up letting player know the results of the round.
-                break;
+                break;//command to break out of loop.
             };
 
         };
     };
 
-    function winnerCheck(){ //this function is the winner check function and is outside the other functions 
+    function winnerCheck(){ //this function is the winner check function and is outside the other functions
         var result="no winner";// variable for logic process if no winner occurs.
         if (playerOneHealth<1 && playerTwoHealth<1)
         {
@@ -69,10 +69,10 @@
         {
             result = playerOneName+" WINS!!!"
         };
-        return result;
+        return result;// command to return result from loop. if this is missing no information can be taken from the loop.
     };
 
     /*******  The program gets started below *******/
-    fight();
+    fight();//call command for the fight function.
 
 })();
