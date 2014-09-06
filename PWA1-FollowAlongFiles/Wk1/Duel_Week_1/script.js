@@ -48,10 +48,10 @@
             if (result==="no winner")
             {
                 round++;
-                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
+                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth); // alert pop-up to player informing them on player name, player health, and round number.
 
             } else{
-                alert(result);
+                alert(result);// alert pop-up letting player know the results of the round.
                 break;
             };
 
