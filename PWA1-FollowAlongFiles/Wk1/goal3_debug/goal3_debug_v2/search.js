@@ -2,7 +2,7 @@
  * Created by skylerbrown on 9/7/14.
  */
 // Create privatized scope using a self-executing function
-(function(){
+(function(){ // un-named function used to process all the tasks in the program.
 
     // Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
     var resultsDIV = document.getElementById("results"),
@@ -11,33 +11,33 @@
         ;
 
     // Validates search query
-    var validqte == function(query){
+    var validate = function(query){ //function used to take the users input and test for length.
 
         // Trim whitespace from start and end of search query
-        while(query.charAt(0) = " "){
-            query = query.substring(1, query.length);
+        while(query.charAt(0) === " "){
+            query = query.substring(1, query.length); // while loop used while the user input is less than 3 characters
         };
-        while(query.charAt(query.length-1) === ""){
-            query = query.substring(0, query.length-1);
-            ;
+        while(query.charAt(query.length-1) === "") {
+            query = query.substring(0, query.length - 1);
+        };
 
             // Check search length, must have 3 characters
             if(query.length < 3){
-                alert("Your search query is too small, try again.);
+                alert("Your search query is too small, try again."); // alert if the users input is less than 3 characters.
 
                 // (DO NOT FIX THE LINE DIRECTLY BELOW)
                 searchInput.focus();
                 return;
             };
 
-            search(query);
+            search(query);// calls on the function for query to use in search engine.
         };
 
-        // Finds search matches
-        var search = function(query)
+        // Finds search matches // code from here down is not used for v2 of the assignment only needed errors fixed for the whole function to run.
+        var search = function(query){
 
         // split the user's search query string into an array
-        var queryArray = query.join(" ");
+        var queryArray = query.split (" ");
 
         // array to store matched results from database.js
         var results = [];
@@ -52,17 +52,18 @@
 
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
-            for(var ii=0, jj=queryArray.length; ii<jj; ii++){
+            for(var ii=0, jj=queryArray.length; ii<jj; ii++) {
                 var qitem = queryArray[ii].tolowercase();
 
                 // is the keyword anywhere in the video title?
                 // If a match is found, push full db[i] into results array
                 var compare = dbitem.indexOf(qitem);
-                if(compare !== -1){
+                if (compare !== -1) {
                     results.push(db[i]);
-                };
+                }
                 ;
-                ;
+            };
+            };
 
                 results.sort();
 
@@ -111,13 +112,13 @@
 
             // The onsubmit event will be reviewed in upcoming Course Material.
             // THE LINE DIRECTLY BELOW IS CORRECT
-            document.forms[0].onsubmit = function(){
+            document.forms[0].onsubmit = function() {
                 var query = searchInput.value;
-                validqte(query);
+                validate(query);
 
                 // return false is needed for most events - this will be reviewed in upcoming course material
                 // THE LINE DIRECTLY BELOW IS CORRECT
                 return false;
-                ;
+            };
 
             })();
