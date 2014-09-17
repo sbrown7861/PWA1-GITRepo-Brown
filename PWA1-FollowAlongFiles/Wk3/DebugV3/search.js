@@ -18,10 +18,10 @@
         // Trim whitespace from start and end of search query
         while(query.charAt(0) === " "){
             query = query.substring(1, query.length); // while loop used while the user input is less than 3 characters
-        };
+        }
         while(query.charAt(query.length-1) === "") {
             query = query.substring(0, query.length - 1);
-        };
+        }
 
         // Check search length, must have 3 characters
         if(query.length < 3){
@@ -30,16 +30,16 @@
             // (DO NOT FIX THE LINE DIRECTLY BELOW)
             searchInput.focus();
             return;
-        };
+        }
 
         search(query);// calls on the function for query to use in search engine.
     };
 
-    // Finds search matches // code from here down is not used for v2 of the assignment only needed errors fixed for the whole function to run.
+    // Finds search matches
     var search = function(query){
 
         // split the user's search query string into an array
-        var queryArray = query.split (" ");
+        var queryArray = query.split (" ");//was join and needed to be split.
 
         // array to store matched results from database.js
         var results = [];
@@ -64,9 +64,9 @@
                 if (compare !== -1) {
                     results.push(db[i]);
                 }
-                ;
-            };
-        };
+
+            }
+        }
 
         results.sort();
 
@@ -75,7 +75,7 @@
             noMatch();
         }else{
             showMatches(results);
-        };
+        }
     };
 
     // Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
@@ -109,7 +109,7 @@
 
             // make the video link - THE NEXT LINE IS CORRECT.
             html += '<p><a href=' + url + '>' + title + '</a></p>';
-        };
+        }
         resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
     };
 
