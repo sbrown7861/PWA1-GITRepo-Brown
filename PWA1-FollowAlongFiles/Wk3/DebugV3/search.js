@@ -44,7 +44,7 @@
         // array to store matched results from database.js
         var results = [];
 
-        console.log("console log 1");
+
 
         // loop through each index of db array
         for(var i=0, j=db.length; i<j; i++){
@@ -52,15 +52,15 @@
             // each db[i] is a single video item, each title ends with a pipe "|"
             // save a lowercase variable of the video title
             var dbTitleEnd = db[i].indexOf('|');
-            var dbItem = db[i].toLowerCase().substring(0, dbTitleEnd);
+            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);//to lower case was the wrong syntax i fixed this in week 2
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
             for(var ii=0, jj=queryArray.length; ii<jj; ii++) {
-                var qItem = queryArray[ii].toLocaleLowerCase();
+                var qitem = queryArray[ii].toLocaleLowerCase();
 
                 // is the keyword anywhere in the video title?
                 // If a match is found, push full db[i] into results array
-                var compare = dbItem.indexOf(qItem);
+                var compare = dbitem.indexOf(qitem);
                 if (compare !== -1) {
                     results.push(db[i]);
                 }
@@ -71,7 +71,7 @@
         results.sort();
 
         // Check that matches were found, and run output functions
-        if(results.length = 0){
+        if(results.length === 0){ //this is the logic error i was stuck on. I could not figure it out last week and has to refer to week 3 screen cast.
             noMatch();
         }else{
             showMatches(results);
