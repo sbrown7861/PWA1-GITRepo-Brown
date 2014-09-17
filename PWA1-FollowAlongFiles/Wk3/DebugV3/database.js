@@ -1,6 +1,7 @@
 /**
- * Created by skylerbrown on 9/7/14.
+ * Created by skylerbrown on 9/16/14.
  */
+
 var db = [
     "JavaScript Version History|http://wddbs.com/javascript/sfw/online/#p=videos&s=3&file=01.html",
     "JavaScript in the Browser|http://wddbs.com/javascript/sfw/online/#p=videos&s=3&file=01.html",
