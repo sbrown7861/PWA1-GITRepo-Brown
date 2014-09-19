@@ -1,7 +1,6 @@
 /**
- * Created by skylerbrown on 9/16/14.
+ * Created by skylerbrown on 9/18/14.
  */
-
 
 // self-executing function
 (function(){ //this function contains all the other functions to run program.
@@ -22,9 +21,9 @@
 
      */
 
-    var playerOne = ["Kratos","20","100" ];//array for player one info.
+    var playerOne = ["Kabal","20","100" ];//array for player one info.
 
-    var playerTwo = ["Kabal","20","100" ];//array for player two info.
+    var playerTwo = ["Kratos","20","100" ];//array for player two info.
 
 
     /*
